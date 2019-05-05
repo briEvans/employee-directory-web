@@ -64,11 +64,13 @@ class Employee extends Component {
                 ref={phoneInput => this.phoneInput = phoneInput}
                 defaultValue={phone}
               />
-              <input className="employee-detail"
-                placeholder="Location"
+              <select className="employee-detail">
+                <option value="Austin">Austin</option>
+                  <option value="Sanjose">Sanjose</option>
+                  <option value="Tokyo">Tokyo</option>
                 ref={locationInput => this.locationInput = locationInput}
                 defaultValue={location}
-              />
+              </select>
             </div>
             <button className="btn-crud">Save</button>
             </form>)

@@ -317,7 +317,7 @@ input {-webkit-appearance: none; box-shadow: none !important; }
   box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
 
 
-  input {
+  input, select {
     border-radius: $global-border-radius;
     color: white;
     height: 1rem;
@@ -327,6 +327,7 @@ input {-webkit-appearance: none; box-shadow: none !important; }
     padding: 0.25rem;
     width: 90%;
   }
+
 }
 
 .employee-image {
@@ -366,6 +367,39 @@ input {-webkit-appearance: none; box-shadow: none !important; }
   display: block;
   font-size: 0.85rem;
   margin: 0.25rem;
+}
+
+.location {
+  display: inline-block;
+  height: 24rem;
+  width: 18rem;
+  border-radius: $global-border-radius;
+  background-color: #282828;
+      text-align: center;
+
+  color: white;
+  margin: 0.5rem;
+
+  // shadow:
+  -webkit-box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
+  -moz-box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
+  box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
+
+
+  img {
+    width: 18rem;
+    height: 10rem;
+  }
+}
+
+.location-detail {
+  font-size: 0.85rem;
+  padding: 0.75rem;
+}
+
+.department {
+  display: block;
+  width: 100%;
 }
 
 .btn-crud {

@@ -73,19 +73,19 @@ class App extends Component {
               />}
             />
 
-          <Route path="/departments" component={() => <List
-                list={this.state.departments}
-                category="Departments"
-                theme="colorGrass"
-                />}
-              />
-
             <Route path="/locations" component={() => <List
                     list={this.state.locations}
                     category="Locations"
-                    theme="colorLime"
+                    theme="colorGrass"
                     />}
                   />
+
+                  <Route path="/departments" component={() => <List
+                        list={this.state.departments}
+                        category="Departments"
+                        theme="colorLime"
+                        />}
+                      />
         </Router>
       );
     }

@@ -21,15 +21,15 @@ class Base extends Component {
               </Link>
             </li>
             <li>
-              <Link className="app-link bgGrass" to="/departments">
-                <span className="action">List Departments</span>
-              <p> See all Departments listed in alphabetical order in the company</p>
+              <Link className="app-link bgGrass" to="/locations">
+                <span className="action">List Locations</span>
+                <p>See all Locations listed in alphabetical order in the company</p>
             </Link>
             </li>
             <li>
-              <Link className="app-link bgLime" to="/locations">
-                <span className="action">List Locations</span>
-                <p>See all Locations listed in alphabetical order in the company</p>
+              <Link className="app-link bgLime" to="/departments">
+                <span className="action">List Departments</span>
+                  <p> See all Departments listed in alphabetical order in the company</p>
                 </Link>
             </li>
           </ul>

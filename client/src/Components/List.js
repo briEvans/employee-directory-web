@@ -56,8 +56,8 @@ class List extends Component {
                 this.props.list.length > 0 ? (
                   this.props.list.map(item => {
                     return (
-                      <div className="employee-detail">
-                            <h3 className="employee-name">* {item}</h3>
+                      <div className="department">
+                            <h3>{item}</h3>
                       </div>
                     );
                   })
@@ -84,8 +84,10 @@ class List extends Component {
                     this.props.list.map(item => {
                       return (
                         <div className="location">
-                          <img className="employee-image" src={item.image} alt="Photo of {name}" />
-                            <h3 className="employee-name">{item.name}</h3>
+                          <img className="location-image" src={item.image} alt="Photo of {name}" />
+                            <h3>{item.name}</h3>
+                            <span className="location-detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span>
                         </div>
                       );
                     })
