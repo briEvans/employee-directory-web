@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "johndoe@company.com",
+    "phone": "555-55555",
+    "position": "Barista",
+    "location": "Austin, Texas",
+    "department": "Department 1",
+    "image": "https://randomuser.me/api/portraits/men/65.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Amanda Johnson",
+    "email": "ajohnsons@company.com",
+    "phone": "555-55555",
+    "position": "Janitor",
+    "location": "Austin, Texas",
+    "department": "Department 2",
+    "image": "https://randomuser.me/api/portraits/women/1.jpg"
+
+  },
+  {
+    "id": 3,
+    "name": "Louis A. Scott",
+    "email": "lscott@company.com",
+    "phone": "555-55555",
+    "position": " Software Engineering Manager",
+    "location": "Austin, Texas",
+    "department": "Department 3",
+    "image": "https://randomuser.me/api/portraits/men/1.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Linsdsay Purohit",
+    "email": "lpurohit@company.com",
+    "phone": "555-55555",
+    "position": "Principal UI/UX Designer",
+    "location": "San Jose, California",
+    "department": "Department 1",
+    "image": "https://randomuser.me/api/portraits/women/2.jpg"
+  }
+]
