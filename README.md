@@ -73,7 +73,11 @@ npm test
 
 ## TODO
 * Add Pagination to employee directory
+* Form validation
 * Real Photo Upload for edit - feature is currently mocked with generated photos from randomuser.me
 * Componetize Search featue
 * Add departments to the API
-```
+
+## RETROSPECT
+* Manage scope-creep better, especially in terms of adding the locations view and departments view. 
+* Implement Search Feature with more REACT-ISMS. Given the time constraints, implemented client side search with more focus on  vanilla javascript DOM manipulation. 
