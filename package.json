@@ -8,9 +8,17 @@
   },
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "react-modal": "^3.8.1",
+    "react-select": "^2.4.3",
+    "simple-react-validator": "^1.0.7"
   },
   "devDependencies": {
-    "concurrently": "^4.0.1"
+    "concurrently": "^4.0.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-15": "^1.4.0",
+    "jest": "^24.8.0",
+    "logger": "0.0.1",
+    "node-logger": "0.0.1"
   }
 }

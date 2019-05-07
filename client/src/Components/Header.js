@@ -6,11 +6,10 @@ class Header extends Component {
     render() {
       return (
         <header className="app-header">
-          <a className="app-logo" href="/"></a>
-          <span className="add"></span>
-          <span className="user"></span>
+          <a className="app-header-logo" href="/" alt="Employee Director"> .</a>
+          <span className="app-header-user"></span>
           <div className="search search-small">
-            <form className="header-search" onSubmit={this.onSubmit}>
+            <form className="app-header-search" onSubmit={this.onSubmit}>
               <input
                 type="text"
                 placeholder="John Doe..."

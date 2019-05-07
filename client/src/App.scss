@@ -1,190 +1,263 @@
+/*
+################
+VARIABLES
+################
+*/
+
 $color-bg: #282c34;
 $color-dark-blue: #1f3a52;
 $color-turquoise: #41a186;
 $color-grass: #8cca6e;
 $color-lime: #d3f689;
 
-
 $global-border-radius: 5px;
 
+/*
+################
+BROWER DEFAULT OVERRIDES
+################
+*/
 
-.app {
-  text-align: center;
+input, select {
+  -webkit-appearance: none;
+  box-shadow: none !important;
 }
 
-.app-logo {
-  background: url('./logo.svg') no-repeat;
-  float: left;
-  height: 3.5rem;
-  width: 3.5rem;
-  position: relative;
-  top: 0.5rem;
+:-webkit-autofill {
+  color: #fff !important;
+}
+
+a:hover {
+  background-color: rgba(white,0.4);
+  transform: scale(1.015);
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+
+input {
+  border: none;
+  color: white;
+  cursor: pointer;
   margin-left: 1rem;
+  outline: none;
 
-}
-
-.app-header {
-  background: $color-bg;
-  position: sticky;
-  flex-direction: row;
-  top: 0;
-  height: 3.5rem;
-  border-bottom: 1px solid gray;
-  overflow: hidden;
-}
-
-
-// header user
-
-.user {
-  display: inline-block;
-  position: relative;
-  height: 3rem;
-  width: 3rem;
-  border-radius: 50%;
-  float: right;
-  background-color: $color-turquoise;
-  border-radius: 50%;
-  margin-right: 1rem;
-  margin-top: 0.4rem;
-
-  &::before {
-    content: 'A';
-    text-align: center;
-    color: white;
-    font-weight: 300;
-    font-size: 1.75rem;
-
-    position: absolute;
-    right: 0.9rem;
-    top: 0.4rem;
+  &::placeholder {
+    color: lightgray;
   }
 }
 
-
-.add {
-  display: inline-block;
-  border-left: 1px solid gray;
-  border-right: 1px solid gray;
-  height: 3.5rem;
-  width:3.5rem;
-  border-radius: $global-border-radius;
-  text-align: center;
-  float: right;
+button {
   cursor: pointer;
 
-  &::before {
-    content: '+';
-    color: white;
-    font-size: 2rem;
-    font-weight: 600;
-    position: absolute;
-    right: 1.20rem;
-    top: 0.5rem;
+  &:hover {
+    background-color: rgba(white,0.1);
+    transform: scale(1.015);
   }
 }
 
-.welcome {
-  display: none;
+.btn-crud {
   background-color: black;
-  background: rgba(0,0,0,0.5);
+  border: none;
   border-radius: $global-border-radius;
-  font-size: 1rem;
+  bottom: -4rem;
   color: white;
-  padding: 0.5rem;
-  width: 40rem;
+  display: inline-block;
+  float: right;
+  font-weight: 600;
+  margin: 0.25rem;
+  padding: 0.25rem;
+  position: relative;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: rgba(white,0.4);
+    transform: scale(1.015);
+  }
+}
+
+/*
+################
+PAGE STRUCTURES
+################
+*/
+
+.app-nav {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .app-body {
+  align-items: center;
   background-color: $color-bg;
-  min-height: 100vh;
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.app-body-header {
+  border-bottom: 5px solid $color-turquoise;
 }
 
 .app-link {
-  border-radius: $global-border-radius;
-  color: #282828;
-  display: inline-block;
-  width: 15rem;
-  height: 10rem;
-  margin: 0.25rem;
-  padding: 1rem;
-  text-decoration: none;
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.75rem;
-  transition: all .2s ease-in-out;
+  -moz-box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
 
   // shadow:
   -webkit-box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
-  -moz-box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
+  border-radius: $global-border-radius;
   box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
+  color: #282828;
+  display: inline-block;
+  font-size: 1.75rem;
+  font-weight: 600;
+  height: 10rem;
+  margin: 0.25rem;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+  width: 15rem;
 
   p {
     background-color: inherit;
-    font-size: 1rem;
-    margin-top: 1.25rem;
-    font-weight: 400;
-    text-align: left;
-    padding: 0.5rem;
-    height: 5rem;
     background-color: rgba(white,0.15);
     border-radius: $global-border-radius;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 5rem;
+    margin-top: 1.25rem;
+    padding: 0.5rem;
+    text-align: left;
   }
 
   &:hover {
-    transform: scale(1.015);
     background-color: rgba(white,0.4);
+    transform: scale(1.015);
     .action {
       border-bottom: 1px solid #282828;
     }
   }
 }
 
-ul {
-  list-style-type: none;
+.app-container {
+  border-radius: $global-border-radius;
+  display: inline-block;
+  display: block;
+  height: 100%;
+  padding: 0.5rem;
+  position: relative;
+  width: 90%;
+
+  h2 {
+    display: block;
+    margin-left: 0.5rem;
+    margin-top: 0rem;
+    padding-top: 0.25rem;
+  }
 }
 
-.nav {
-  display: flex;
-  flex-wrap: wrap;
+/*
+################
+HEADER
+################
+*/
+
+.app-header {
+  background-color: $color-bg;
+  border-bottom: 1px solid $color-turquoise;
+  flex-direction: row;
+  height: 4rem;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  a {
+    font-size: 0;
+  }
 }
+
+.app-header-logo {
+  background: url('./logo.svg') no-repeat;
+  float: left;
+  height: 3.5rem;
+  margin-left: 1rem;
+  position: relative;
+  top: 0.5rem;
+  width: 3.5rem;
+}
+
+// header user settings
+.app-header-user {
+  background-color: $color-turquoise;
+  border-radius: 50%;
+  border-radius: 50%;
+  display: inline-block;
+  float: right;
+  height: 3rem;
+  margin-right: 1rem;
+  margin-top: 0.4rem;
+  position: relative;
+  width: 3rem;
+
+  &::before {
+    color: white;
+    content: 'A';
+    font-size: 1.75rem;
+    font-weight: 300;
+
+    position: absolute;
+    right: 0.9rem;
+    text-align: center;
+    top: 0.4rem;
+  }
+}
+
+/*
+################
+SEARCH
+################
+*/
 
 .search {
-  color: white;
   background-color: #282828;
   border-radius: $global-border-radius;
+  color: white;
   overflow: hidden;
 
   input {
     background: none;
     height: 100%;
+    width: 80%;
   }
-    button {
-      display: inline-block;
-      height: 100%;
-      width: 4rem;
-      float: right;
-      background-color: black;
-      color: white;
-      border-radius: $global-border-radius;
-      border: none;
-      font-size: 1.9rem;
-      text-transform: uppercase;
-    }
+
+  button {
+    background-color: black;
+    border: none;
+    border-radius: $global-border-radius;
+    color: white;
+    display: inline-block;
+    float: right;
+    font-size: 2rem;
+    height: 100%;
+    text-transform: uppercase;
+    width: 4rem;
+  }
 }
+
 .search-small {
+  border: 2px solid gray;
   display: none;
   float: right;
   height: 50%;
-  width: 10rem;
-  border: 2px solid gray;
   margin: 0.85rem 6rem 0.85rem 0;
+  width: 10rem;
 
   input {
     font-size: 1.25rem;
@@ -193,8 +266,8 @@ ul {
 
 .search-large {
   border: 5px solid gray;
-  width: 30rem;
   height: 2.5rem;
+  width: 30rem;
 
   input {
     font-size: 2rem;
@@ -205,32 +278,202 @@ ul {
   }
 }
 
-input {
-  border: none;
-  cursor: pointer;
-  outline: none;
-  margin-left: 1rem;
+.search-employees-view {
+  float: right;
+}
+
+/*
+################
+EMPLOYEES VIEW
+################
+*/
+
+.employees {
+  background-color: transparent;
+  border-radius: $global-border-radius;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1rem;
+  width: 100%;
+}
+
+.employee {
+  -moz-box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
+
+  // shadow:
+  -webkit-box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
+  background-color: #282828;
+  border-radius: $global-border-radius;
+  box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
+
   color: white;
-  &::placeholder {
-    color: lightgray;
+  display: inline-block;
+  height: 24rem;
+  margin: 0.5rem;
+  width: 18rem;
+
+
+  input, select {
+    background: transparent;
+    border: 2px solid gray;
+    border-radius: $global-border-radius;
+    color: white;
+    height: 1rem;
+    margin: 0.5rem;
+    padding: 0.3rem;
+    width: 90%;
+
+    &:focus {
+      border: 2px solid $color-turquoise;
+    }
+  }
+
+  select {
+    // Specificity, target select height to match input style
+    height: 1.8rem;
+    margin-bottom: 0.4rem;
+    width: 94%;
   }
 }
 
-button {
+.prototype {
   cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+
+  &::before {
+    border: 1px  solid $color-turquoise;
+    border-radius: 50%;
+    color: white;
+    content: '+';
+    display: block;
+    font-size: 1.75rem;
+    font-size: 8rem;
+    font-weight: 800;
+    height: 10rem;
+    left: 4rem;
+    position: relative;
+    text-align: center;
+    top: 3rem;
+    width: 10rem;
+  }
+
+  p {
+    margin-top: 4rem;
+  }
 
   &:hover {
-    color: black;
-    background-color: white;
-
+    background: rgba(white,0.1);
   }
 }
 
-input {-webkit-appearance: none; box-shadow: none !important; }
-:-webkit-autofill { color: #fff !important; }
+.employee-image {
 
+  border: 1px solid $color-turquoise;
+  border-radius: 50%;
+  left: 5rem;
+  position: relative;
+  top: 0.5rem;
+  width: 8rem;
 
-// UTILITY
+}
+
+.employee-details {
+  border-top: 1px solid $color-turquoise;
+  bottom: -0.75rem;
+  display: block;
+  font-size: 0.75rem;
+  height: 9rem;
+  left: 0;
+  margin-top: 0.5rem;
+  position: relative;
+  text-align: center;
+  width: 18rem;
+
+}
+
+.employee-name {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  padding: 0.25rem;
+}
+
+.employee-detail {
+  display: block;
+  font-size: 0.85rem;
+  margin: 0.25rem;
+}
+
+.create {
+  bottom : -7.7rem;
+}
+
+.no-employee-msg {
+  display: block;
+  height: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  width: 100%;
+}
+
+/*
+################
+LOCATIONS VIEW
+################
+*/
+
+.location {
+  -moz-box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
+
+  // shadow:
+  -webkit-box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
+  background-color: #282828;
+  border-radius: $global-border-radius;
+  box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
+
+  color: white;
+  display: inline-block;
+  height: 24rem;
+  margin: 0.5rem;
+  text-align: center;
+  width: 18rem;
+
+  img {
+    height: 10rem;
+    width: 18rem;
+  }
+}
+
+.location-detail {
+  font-size: 0.85rem;
+  padding: 0.75rem;
+}
+
+/*
+################
+DEPARTMENT VIEW
+################
+*/
+
+.department {
+  display: block;
+  width: 100%;
+}
+
+/*
+################
+CLASSIFIED UTILITIES
+################
+*/
+
+.hide {
+  display: none;
+}
 
 .colorTurq {
   color: $color-turquoise;
@@ -251,6 +494,7 @@ input {-webkit-appearance: none; box-shadow: none !important; }
 .colorLime {
   color: $color-lime;
 }
+
 .bgLime {
   background-color: $color-lime;
 }
@@ -260,163 +504,7 @@ input {-webkit-appearance: none; box-shadow: none !important; }
 }
 
 .list-search-wrap {
+  float: right;
   position: relative;
   top: -4rem;
-  float: right;
-}
-
-
-// Employees
-
-.container {
-  display: inline-block;
-  padding: 0.5rem;
-  position: relative;
-  display: block;
-  width: 90%;
-  top: -2rem;
-  height: 100%;
-  z-index: 999;
-  border-radius: $global-border-radius;
-
-  h2 {
-    display: block;
-    margin-top: 0rem;
-    padding-top: 0.25rem;
-    margin-left: 0.5rem;
-  }
-}
-
-.header {
-  border-bottom: 5px solid $color-turquoise;
-}
-
-.employees {
-  background-color: transparent;
-  margin: 1rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  border-radius: $global-border-radius;
-  width: 100%;
-}
-
-.employee {
-  display: inline-block;
-  height: 24rem;
-  width: 18rem;
-  border-radius: $global-border-radius;
-  background-color: #282828;
-
-  color: white;
-  margin: 0.5rem;
-
-  // shadow:
-  -webkit-box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
-  -moz-box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
-  box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
-
-
-  input, select {
-    border-radius: $global-border-radius;
-    color: white;
-    height: 1rem;
-    background: transparent;
-    border: 2px solid gray;
-    margin: 0.5rem;
-    padding: 0.25rem;
-    width: 90%;
-  }
-
-}
-
-.employee-image {
-  position: relative;
-  width: 8rem;
-  border-radius: 50%;
-  top: 0.5rem;
-  left: 5rem;
-
-  border: 1px solid $color-turquoise;
-
-}
-
-.employee-details {
-  display: block;
-  height: 9rem;
-  width: 18rem;
-  position: relative;
-  margin-top: 0.5rem;
-  left: 0;
-  bottom: -0.75rem;
-  text-align: center;
-  font-size: 0.75rem;
-  border-top: 1px solid $color-turquoise;
-
-}
-
-.employee-name {
-  display: block;
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-  padding: 0.25rem;
-}
-
-.employee-detail {
-  display: block;
-  font-size: 0.85rem;
-  margin: 0.25rem;
-}
-
-.location {
-  display: inline-block;
-  height: 24rem;
-  width: 18rem;
-  border-radius: $global-border-radius;
-  background-color: #282828;
-      text-align: center;
-
-  color: white;
-  margin: 0.5rem;
-
-  // shadow:
-  -webkit-box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
-  -moz-box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
-  box-shadow: 11px 10px 4px -8px rgba(0,0,0,0.75);
-
-
-  img {
-    width: 18rem;
-    height: 10rem;
-  }
-}
-
-.location-detail {
-  font-size: 0.85rem;
-  padding: 0.75rem;
-}
-
-.department {
-  display: block;
-  width: 100%;
-}
-
-.btn-crud {
-  background-color: black;
-  display: inline-block;
-  position: relative;
-  color: white;
-  font-weight: 600;
-  text-transform: uppercase;
-  border: none;
-  border-radius: $global-border-radius;
-  float: right;
-  margin: 0.25rem;
-  padding: 0.25rem;
-  bottom: -4rem;
-
-  &:hover {
-    backround-color: $color-grass;
-  }
 }
