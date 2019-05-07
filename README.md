@@ -10,7 +10,7 @@ This was a fun to create Full Stack Web app with EXPRESS on the backend serving 
 1. Install Yarn
 * https://www.npmjs.com/package/yarn
 
-via brew: 
+via Homebrew: 
 
 ```sh
 brew install yarn
@@ -27,8 +27,6 @@ npm install
 cd ..
 npm install
 ```
-
-1. Install yarn https://www.npmjs.com/package/yarn
 
 
 ## RUN APPLICATION
