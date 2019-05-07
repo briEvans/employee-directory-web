@@ -1,5 +1,6 @@
 # React Employee Directory
-This is a fun Full Stack Web app with EXPRESS on the backend serving up a simple JSON API and REACT/REACT-ROUTER on the client-side doing some pretty awesome stuff. 
+This was a fun to create Full Stack Web app with EXPRESS on the backend serving up a simple JSON API and REACT/REACT-ROUTER on the client-side enabling some pretty sweet interface interactions. 
+![](readme-img/ed-colage.png)
 
 ## SET UP
 
@@ -9,14 +10,22 @@ This is a fun Full Stack Web app with EXPRESS on the backend serving up a simple
 node install
 ```
 
-1. Install Dependencies via yarn
+1. Install Client Dependencies via npm in the '/client' directory
 ```sh
-yarn install
+cd client/
+npm install
 ```
+
+1. Install Dependencies via npm in root of project 
+```sh
+cd ..
+npm install
+```
+
+1. Install yarn https://www.npmjs.com/package/yarn
 
 ## RUN APPLICATION
 1. `yarn dev` (This runs the server on port 5000 and the client on port 3000)
-
 
 
 ## INTERFACE / VIEWS
