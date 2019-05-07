@@ -1,5 +1,8 @@
 # React Employee Directory
 This was a fun to create Full Stack Web app with EXPRESS on the backend serving up a simple JSON API and REACT/REACT-ROUTER on the client-side enabling some pretty sweet interface interactions. 
+
+The collage below captures some of the features I will highlight in this README. There are also a view animated gifs to better show off the interface.
+
 ![](readme-img/ed-colage.png)
 
 ## SET UP
