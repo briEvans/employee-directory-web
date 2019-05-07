@@ -4,6 +4,7 @@ import { shallow, mount, render } from 'enzyme';
 
 import Create from '../Create';
 
+const wrapper = mount(<Create />);
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -12,7 +13,7 @@ it('renders without crashing', () => {
 });
 
 it('renders a name input', () => {
-  expect(shallow(<Create />).find('#email').length).toEqual(1)
+  expect(shallow(<Create />).find(wrapper.ref).length).toEqual(1)
 });
 
 it('renders a email input', () => {
