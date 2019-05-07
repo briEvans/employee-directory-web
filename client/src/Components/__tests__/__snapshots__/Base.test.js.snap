@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Base component it matches the snapshot 1`] = `
+<div
+  className="app-body"
+>
+  <h1>
+    Employee Directory
+  </h1>
+  <div
+    className="search search-large"
+  >
+    <form
+      className="product-form"
+      onSubmit={[Function]}
+    >
+      <input
+        placeholder="John Doe..."
+        type="text"
+      />
+      <button>
+        Go
+      </button>
+    </form>
+  </div>
+  <ul
+    className="app-nav"
+  >
+    <li>
+      <Link
+        className="app-link bgTurq"
+        to="/employees"
+      >
+        <span
+          className="action"
+        >
+          List Employees
+        </span>
+        <p>
+           See all employees listed in alphabetical order by name
+        </p>
+      </Link>
+    </li>
+    <li>
+      <Link
+        className="app-link bgGrass"
+        to="/locations"
+      >
+        <span
+          className="action"
+        >
+          List Locations
+        </span>
+        <p>
+          See all Locations listed in alphabetical order in the company
+        </p>
+      </Link>
+    </li>
+    <li>
+      <Link
+        className="app-link bgLime"
+        to="/departments"
+      >
+        <span
+          className="action"
+        >
+          List Departments
+        </span>
+        <p>
+           See all Departments listed in alphabetical order in the company
+        </p>
+      </Link>
+    </li>
+  </ul>
+</div>
+`;

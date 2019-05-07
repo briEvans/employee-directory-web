@@ -172,6 +172,7 @@ class App extends Component {
 
           <Route path="/departments" component={() => <Departments
               departments={this.state.departments}
+
               category="Departments"
           />}/>
       </Router>

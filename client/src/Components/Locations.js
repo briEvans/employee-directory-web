@@ -15,7 +15,7 @@ class Locations extends Component {
               this.props.locations.length > 0 ? (
                 this.props.locations.map(item => {
                   return (
-                    <div className="location">
+                    <div className="location" key={item.name}>
                       <img className="location-image" src={item.image} alt={item.name} />
                       <h3>{item.name}</h3>
                       <span className="location-detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry.

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Departments component it matches the snapshot 1`] = `
+<div
+  className="app-body"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="header"
+    >
+      <h2>
+        Listing 
+      </h2>
+    </div>
+    <div
+      className="employees"
+    >
+      <div
+        className="department"
+        key="Department 1"
+      >
+        <h3>
+          Department 1
+        </h3>
+      </div>
+      <div
+        className="department"
+        key="Department2"
+      >
+        <h3>
+          Department2
+        </h3>
+      </div>
+      <div
+        className="department"
+        key="Department3"
+      >
+        <h3>
+          Department3
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -14,7 +14,7 @@ class Departments extends Component {
               this.props.departments.length > 0 ? (
                 this.props.departments.map(item => {
                   return (
-                    <div className="department">
+                    <div className="department" key={item}>
                           <h3>{item}</h3>
                     </div>
                   );

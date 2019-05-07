@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Locations component it matches the snapshot 1`] = `
+<div
+  className="app-body"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="header"
+    >
+      <h2>
+        Listing 
+      </h2>
+    </div>
+    <div
+      className="employees"
+    >
+      <div
+        className="location"
+        key="Austin, Texas"
+      >
+        <img
+          alt="Austin, Texas"
+          className="location-image"
+          src="https://www.mymilestone.com/blog/wp-content/uploads/2017/12/forecast-1.jpg"
+        />
+        <h3>
+          Austin, Texas
+        </h3>
+        <span
+          className="location-detail"
+        >
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+        </span>
+      </div>
+      <div
+        className="location"
+        key="San Jose, California"
+      >
+        <img
+          alt="San Jose, California"
+          className="location-image"
+          src="https://www.valleyinnsanjose.com/gallery-images/properties/5/0/1/1540545718_attractions_1.jpg"
+        />
+        <h3>
+          San Jose, California
+        </h3>
+        <span
+          className="location-detail"
+        >
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+        </span>
+      </div>
+      <div
+        className="location"
+        key="Tokyo, Japan"
+      >
+        <img
+          alt="Tokyo, Japan"
+          className="location-image"
+          src="https://www.telegraph.co.uk/content/dam/Travel/Destinations/Asia/Japan/Tokyo/tokyo-city-scape.jpg?imwidth=450"
+        />
+        <h3>
+          Tokyo, Japan
+        </h3>
+        <span
+          className="location-detail"
+        >
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
